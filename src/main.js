@@ -6,8 +6,10 @@ import { routes } from './routes'
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-  routes
   // routes: routes -- this ES6 do for us
+  routes,
+  // no /#/ hash tag style in the url (history mode). The default mode is 'hash'
+  mode: 'history'
 });
 
 new Vue({
