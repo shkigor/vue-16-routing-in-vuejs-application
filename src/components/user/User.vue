@@ -9,14 +9,10 @@
 
 <script>
 export default {
-    data() {
-        return {
-            id: this.$route.params.id
-        }
-    },
-    watch: {
-        '$route'(to, from) {
-            this.id = to.params.id;
+    props: {
+        id: {
+            type: String,
+            default: '123'
         }
     },
     methods: {
