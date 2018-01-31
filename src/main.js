@@ -21,6 +21,11 @@ const router = new VueRouter({
   }
 });
 
+router.beforeEach((to, from, next) => {
+  console.log('global beforeEach');
+  next(); // we can pass to next() one of param: false, path, redirect or object with route name
+});
+
 new Vue({
   el: '#app',
   router, // router: router -- as the same upper
